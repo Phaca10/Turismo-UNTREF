@@ -1,26 +1,27 @@
-// src/components/Carousel.jsx
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './Carousel.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const ImageCarousel = () => {
+const Carousel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
-    <Carousel showThumbs={false} autoPlay infiniteLoop>
-      <div>
-        <img src="path/to/image1.jpg" alt="Image 1" />
-        <p className="legend">Image 1</p>
-      </div>
-      <div>
-        <img src="path/to/image2.jpg" alt="Image 2" />
-        <p className="legend">Image 2</p>
-      </div>
-      <div>
-        <img src="path/to/image3.jpg" alt="Image 3" />
-        <p className="legend">Image 3</p>
-      </div>
-    </Carousel>
+    <div className="bg-white p-4 rounded shadow-md">
+      <h2 className="text-2xl font-bold mb-4">Lugares Recomendados</h2>
+      <Slider {...settings}>
+        <div className="w-48 h-32 bg-gray-200 rounded">Imagen 1</div>
+        <div className="w-48 h-32 bg-gray-200 rounded">Imagen 2</div>
+        <div className="w-48 h-32 bg-gray-200 rounded">Imagen 3</div>
+      </Slider>
+    </div>
   );
 };
 
-export default ImageCarousel;
+export default Carousel;
