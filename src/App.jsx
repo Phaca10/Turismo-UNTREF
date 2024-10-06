@@ -1,24 +1,15 @@
-// src/App.jsx
 import React from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ImageCarousel from './components/Carousel';
-import './components/Navbar.css';
-import './components/Footer.css';
-import './components/Carousel.css';
-import './App.css';
+import UserLogin from "./components/UserLogin";
+import FormRegister from "./components/FormRegister";
 
-const App = () => {
+
+function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <main className="main-content">
-        <ImageCarousel />
-        {/* Otros componentes o contenido */}
-      </main>
-      <Footer />
+    <div className="App">
+      <UserLogin />
+      <FormRegister />
     </div>
   );
-};
+}
 
 export default App;
