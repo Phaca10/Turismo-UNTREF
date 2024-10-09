@@ -2,7 +2,7 @@
     {
         "id": 1,
         "nombre": "Hotel Europa",
-        "descripcion": "Hotel - habitaciones con baño privado",
+        "descripcion": "Alojamiento familiar - habitaciones con baño privado",
         "categoria": "hospedaje",
         "referencia": "Ubicado frente a la Plaza San Martín",
         "direccion": "Sarmiento 408",
@@ -16,7 +16,7 @@
     {
         "id": 2,
         "nombre": "Hotel La Plaza",
-        "descripcion": "Hostal - habitaciones con baño privado",
+        "descripcion": "Confortables habitaciones con baño privado",
         "categoria": "hospedaje",
         "referencia": "",
         "direccion": "Rodriguez Peña 1161",
@@ -30,7 +30,7 @@
     {
         "id": 3,
         "nombre": "Hostal Meraki",
-        "descripcion": "Hostal - habitaciones con baño privado",
+        "descripcion": "Habitaciones con individuales y familiares baño privado",
         "categoria": "hospedaje",
         "referencia": "",
         "direccion": "Facundo Quiroga 653",
