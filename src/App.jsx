@@ -12,7 +12,7 @@ import "./App.css";
 const App = () => {
   return (
     <div className="app">
-      <Destinos nombre={''} categoria={''} />
+      {/* <Destinos nombre={''} categoria={'paseos'} /> */}
       <Navbar />
       <main className="main-content">
         <ImageCarousel />
