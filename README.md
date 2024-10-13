@@ -19,7 +19,7 @@ A fin de planificar, desarrollar y probar el sitio web, el proyecto utiliza los 
 - [Canal en Discord](https://discord.com/channels/1288103762744836167/1288103763260739679), usado como espacio de comunicación entre los miembros del equipo
 - [Repositorio en GitHub](https://github.com/Phaca10/Turismo-UNTREF), donde los archivos fuentes son compartidos y actualizados de manera colaborativa
 - [Diseños en Figma](https://www.figma.com/design/94Qr5sl2BI1tF91sjOJdp5/PROYECT-TURISMO-GLM?node-id=0-1&node-type=canvas&t=qMNOpIV0R2HjdOwz-0), aportando la referencia de aspecto visual y navegación del sitio
-- [Trello](https://www.figma.com/design/94Qr5sl2BI1tF91sjOJdp5/PROYECT-TURISMO-GLM?node-id=0-1&node-type=canvas&t=qMNOpIV0R2HjdOwz-0), usado para documentar las tareas acordadas en el proyecto y seguir el estado de avance de cada una de ellas
+- [Trello]([https://www.figma.com/design/94Qr5sl2BI1tF91sjOJdp5/PROYECT-TURISMO-GLM?node-id=0-1&node-type=canvas&t=qMNOpIV0R2HjdOwz-0](https://trello.com/b/RLeV2gpt/bootcamp-proyecto-final-i), usado para documentar las tareas acordadas en el proyecto y seguir el estado de avance de cada una de ellas
 
 ## Descripción del Proyecto
 
