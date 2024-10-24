@@ -4,9 +4,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ImageCarousel from "./components/Carousel";
 import Destinos from "./components/Destinos";
-import "./components/Navbar.css";
-import "./components/Footer.css";
-import "./components/Carousel.css";
 import "./App.css";
 
 const App = () => {
