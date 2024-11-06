@@ -1,7 +1,7 @@
 import React from 'react';
-import UserLogin from "./components/UserLogin";
-import FormRegister from "./components/FormRegister";
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import UserLogin from './components/UserLogin';
+import FormRegister from './components/FormRegister';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -17,6 +17,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 

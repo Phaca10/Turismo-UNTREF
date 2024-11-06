@@ -1,8 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ImagenLogo from '../img/logo-glm.png';
+import { RegistroUsuarios } from '../datos/Usuarios';
 
-function UserLogin() {
+const UserLogin = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [error, setError] = useState('');
+  const registro = new RegistroUsuarios();
+
+  useEffect(() => {
+    const usuarioLogueado = localStorage.getItem('usuarioLogueado');
+    if (usuarioLogueado) {
+      setLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setError(''); // Limpiar el error anterior
+
+    try {
+      const resultado = registro.iniciarSesion(email, password);
+      if (resultado) {
+        setLoggedIn(true);
+        alert('Sesión iniciada correctamente.');
+      }
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  const handleLogout = () => {
+    registro.cerrarSesion();
+    setLoggedIn(false);
+    alert('Sesión cerrada.');
+  };
+
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -16,7 +51,7 @@ function UserLogin() {
         </h2>
       </div>
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form action="#" method="POST" className="space-y-6">
+        <form onSubmit={handleLogin} className="space-y-6">
           <div>
             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
               Correo Electronico
@@ -28,21 +63,16 @@ function UserLogin() {
                 type="email"
                 required
                 autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between">
-              <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                Contraseña
-              </label>
-              <div className="text-sm">
-                <a href="#" className="font-semibold text-green-600 hover:text-green-400">
-                  Olvidaste tu contraseña?
-                </a>
-              </div>
-            </div>
+            <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
+              Contraseña
+            </label>
             <div className="mt-2">
               <input
                 id="password"
@@ -50,10 +80,13 @@ function UserLogin() {
                 type="password"
                 required
                 autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
+          {error && <p className="text-red-500">{error}</p>}
           <div>
             <button
               type="submit"
@@ -70,11 +103,17 @@ function UserLogin() {
           </Link>
         </p>
       </div>
+      {loggedIn && (
+        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default UserLogin;
+
+
 
 
 
