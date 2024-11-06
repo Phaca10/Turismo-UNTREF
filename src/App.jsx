@@ -42,16 +42,6 @@ const App = () => {
               <h3 className="text-xl font-semibold text-white">Gastronomía</h3>
               <p className="text-white">Disfruta de la mejor gastronomía local y sabores únicos.</p>
             </div>
-            <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-              <img src="images/Gastronomia.jpg" alt="Gastronomía" className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold text-white">Gastronomía</h3>
-              <p className="text-white">Disfruta de la mejor gastronomía local y sabores únicos.</p>
-            </div>
-            <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-              <img src="images/Gastronomia.jpg" alt="Gastronomía" className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold text-white">Gastronomía</h3>
-              <p className="text-white">Disfruta de la mejor gastronomía local y sabores únicos.</p>
-            </div>
           </section>
         </main>
       </div>
