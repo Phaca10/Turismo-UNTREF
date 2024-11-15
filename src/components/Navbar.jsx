@@ -54,7 +54,7 @@ const Navbar = () => {
             <a href="#Historia" className="block text-white hover:bg-gray-700 px-4 py-2 rounded">Historia</a>
           </li>
           <li className="transition-transform duration-300 transform hover:scale-105">
-            <a href="#contactos" className="block text-white hover:bg-gray-700 px-4 py-2 rounded">Contactos</a>
+            <a href="#Consultas" className="block text-white hover:bg-gray-700 px-4 py-2 rounded">Consultas</a>
           </li>
           
           {/* Ícono de perfil con texto "Mi Perfil" y espaciado */}
