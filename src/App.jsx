@@ -1,15 +1,15 @@
-import React from 'react';
-import UserLogin from './components/UserLogin';
-import FormRegister from './components/FormRegister';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Consultas from './components/Consultas';
 
 function App() {
   return (
     <Router>
       <div>
         <Routes>
-          <Route path="/register" element={<FormRegister />} />
-          <Route path="/" element={<UserLogin />} />
+          {/* Redirigir automáticamente a /contacto */}
+          <Route path="/" element={<Navigate to="/consultas" />} />
+          {/* Ruta para el formulario de contacto */}
+          <Route path="/consultas" element={<Consultas />} />
         </Routes>
       </div>
     </Router>
@@ -17,6 +17,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 
