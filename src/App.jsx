@@ -1,8 +1,7 @@
+// import inicio from "./pages/inicio";
 
-import inicio from "./pages/inicio";
+// function App () {
 
-function App () {
-
-  return inicio ()
-}
-export default App;
+//   return inicio ()
+// }
+// export default App;

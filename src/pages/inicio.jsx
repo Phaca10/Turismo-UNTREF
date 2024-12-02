@@ -1,15 +1,12 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import ImageCarousel from "../components/Carousel";
 import "../App.css";
-
 
 
 const inicio = () => {
     return (
 
     <div className="flex flex-col min-h-screen">
-    <Navbar />
+
     <div className="flex-grow relative">
     <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/lamadridfondo.jpg')" }}></div>
     <div className="absolute inset-0 bg-black bg-opacity-70"></div>
@@ -46,7 +43,7 @@ const inicio = () => {
         </section>
     </main>
     </div>
-    <Footer />
+
     </div>
 
     )
