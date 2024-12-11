@@ -2,13 +2,14 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 // import json_destinos from "../datos/destinos.json";
-const URL_SERVICIO_DESTINOS = "http://localhost:3008/destinos";
+// const URL_SERVICIO_DESTINOS = "http://localhost:3008/destinos";
 
 const Destinos = ({ nombre, categoria }) => {
   const [destinos, setDestinos] = useState([]);
 
   useEffect(() => {
-    fetch(URL_SERVICIO_DESTINOS)
+    // fetch(URL_SERVICIO_DESTINOS)
+    fetch(import.meta.env.VITE_URL_SERVICIO_DESTINOS + "/destinos")
       .then((respuesta) => respuesta.json())
       .then((respuestaDestinos) => {
         setDestinos(respuestaDestinos);
