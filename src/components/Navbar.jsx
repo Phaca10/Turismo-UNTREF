@@ -46,7 +46,7 @@ const Navbar = () => {
           } md:flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8 mt-4 md:mt-0 w-full md:w-auto justify-center pr-6`}
         >
           <li className="transition-transform duration-300 transform hover:scale-105">
-            <Link to="/inicio" className="block text-white hover:bg-gray-700 px-4 py-2 rounded">Inicio</Link>
+            <Link to="/" className="block text-white hover:bg-gray-700 px-4 py-2 rounded">Inicio</Link>
           </li>
           <li className="transition-transform duration-300 transform hover:scale-105">
             <Link to="/turismo" className="block text-white hover:bg-gray-700 px-4 py-2 rounded">Qué Hacer</Link>

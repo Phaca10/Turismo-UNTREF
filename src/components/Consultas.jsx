@@ -1,4 +1,5 @@
-import useFormulario from '../datos/useFormulario'; 
+import useFormulario from '../datos/useFormulario';
+
 function Consultas() {
   const {
     nombre,
@@ -17,7 +18,7 @@ function Consultas() {
   return (
     <div 
       className="bg-cover bg-center min-h-screen flex items-center justify-center px-6 py-12 sm:py-16 lg:px-8"
-      style={{ backgroundImage: 'url("/src/img/background.png")' }} // Ruta de la imagen de fondo
+      style={{ backgroundImage: 'url("/src/img/background.png")' }}
     >
       <div className="mx-auto max-w-2xl text-center w-full">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -28,7 +29,7 @@ function Consultas() {
         </p>
         <form 
           onSubmit={handleRegister} 
-          onKeyDown={handleKeyPress}  // Detectar la tecla presionada
+          onKeyDown={handleKeyPress} 
           className="mx-auto mt-12 max-w-xl sm:mt-16 w-full"
         >
           {error && <p className="text-red-600">{error}</p>}
@@ -121,17 +122,3 @@ function Consultas() {
 }
 
 export default Consultas;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
