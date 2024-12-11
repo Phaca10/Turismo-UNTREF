@@ -3,9 +3,6 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ImageCarousel from './components/Carousel';
-import './components/Navbar.css';
-import './components/Footer.css';
-import './components/Carousel.css';
 import './App.css';
 
 function App() {
