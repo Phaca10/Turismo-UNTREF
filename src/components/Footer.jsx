@@ -30,9 +30,10 @@ const Footer = () => {
       </div>
       <div className="flex flex-col items-center">
         <a
-          href="mailto:turismo@lamadrid.gob.ar?Subject=Consulta%20sobre%20turismo"
-          target="_blank"
-          rel="noopener noreferrer"
+          // href="mailto:turismo@lamadrid.gob.ar?Subject=Consulta%20sobre%20turismo"
+          href="mailto:turismo@lamadrid.gob.ar"
+          // target="_blank"
+          // rel="noopener noreferrer"
         >
           <svg
             className="h-8 w-8 text-green-500"
@@ -50,7 +51,11 @@ const Footer = () => {
         <p>Correo</p>
       </div>
       <div className="flex flex-col items-center">
-        <a href="/telefono" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.lamadrid.gob.ar/telefonos-utiles/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             className="h-8 w-8 text-green-500"
             fill="none"
