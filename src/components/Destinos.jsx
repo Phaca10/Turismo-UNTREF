@@ -27,6 +27,7 @@ const Destinos = ({ nombre, categoria }) => {
       });
   }, []);
 
+  let destinosEncontrados = 0;
   return (
     <div>
       {destinos.map((destino) => {
@@ -38,6 +39,7 @@ const Destinos = ({ nombre, categoria }) => {
           (destino.nombre.toLowerCase().indexOf(nombre.toLowerCase()) != -1 &&
             destino.categoria.toLowerCase() === categoria.toLowerCase())
         ) {
+          destinosEncontrados++;
           return (
             <>
               <div key={destino.id} id={destino.id}>
@@ -83,6 +85,9 @@ const Destinos = ({ nombre, categoria }) => {
           );
         }
       })}
+      Total destinos encontrados: {destinosEncontrados}
+      <br></br>
+      <br></br>
     </div>
   );
 };
