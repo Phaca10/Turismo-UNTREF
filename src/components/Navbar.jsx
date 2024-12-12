@@ -28,7 +28,7 @@ const Navbar = () => {
         </button>
         
         {/* Contenedor de barra de búsqueda y navegación */}
-        <div className="flex-grow hidden md:flex items-center space-x-6 justify-center">
+        {/* <div className="flex-grow hidden md:flex items-center space-x-6 justify-center">
           <input
             type="text"
             placeholder="Buscar..."
@@ -37,7 +37,7 @@ const Navbar = () => {
             onFocus={() => setIsSearching(true)}
             onBlur={() => setIsSearching(false)}
           />
-        </div>
+        </div> */}
 
         {/* Menú de navegación con espaciado entre ítems */}
         <ul
