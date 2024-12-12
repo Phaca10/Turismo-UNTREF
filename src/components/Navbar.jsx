@@ -59,7 +59,7 @@ const Navbar = () => {
           </li>
           
           {/* Ícono de perfil con texto "Mi Perfil" y espaciado */}
-          <li className="text-center transition-transform duration-300 transform hover:scale-105">
+          {/* <li className="text-center transition-transform duration-300 transform hover:scale-105">
             <a href="#login" className="block text-white hover:bg-gray-700 px-4 py-2 rounded">
               <svg className="h-8 w-8 mx-auto text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -67,7 +67,7 @@ const Navbar = () => {
               </svg>
               <span className="text-xs mt-1 block">Mi Perfil</span>
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
 
