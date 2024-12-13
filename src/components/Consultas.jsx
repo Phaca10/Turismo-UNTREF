@@ -1,4 +1,5 @@
 import useFormulario from '../datos/useFormulario'; 
+
 function Consultas() {
   const {
     nombre,
