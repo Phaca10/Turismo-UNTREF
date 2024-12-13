@@ -32,6 +32,7 @@ const Footer = () => {
         <a
           // href="mailto:turismo@lamadrid.gob.ar?Subject=Consulta%20sobre%20turismo"
           href="mailto:turismo@lamadrid.gob.ar"
+          onClick={"alert('hola')"}
           // target="_blank"
           // rel="noopener noreferrer"
         >
