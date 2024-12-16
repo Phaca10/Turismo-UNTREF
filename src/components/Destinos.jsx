@@ -47,7 +47,9 @@ const Destinos = ({ nombre, categoria }) => {
                   Nombre: <b>{destino.nombre}</b>
                 </h1>
                 <h2 id="descripcion">Descripción: {destino.descripcion}</h2>
-                <h3 id="categoria">Categoría: {destino.categoria}</h3>
+                <h3 id="categoria">
+                  Categoría: <b>{destino.categoria}</b>
+                </h3>
                 <p id="referencia">Ubicación: {destino.referencia}</p>
                 <p id="direccion">{destino.direccion}</p>
                 <a
