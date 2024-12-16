@@ -7,6 +7,14 @@ import { useEffect } from "react";
 const Destinos = ({ nombre, categoria }) => {
   const [destinos, setDestinos] = useState([]);
 
+  if (typeof nombre === "undefined") {
+    nombre = ""; // Si no tenemos un nombre válido, lo convertimos a cadena vacía
+  }
+
+  if (typeof categoria === "undefined") {
+    categoria = ""; // Si no tenemos un nombre válido, lo convertimos a cadena vacía
+  }
+
   useEffect(() => {
     // fetch(URL_SERVICIO_DESTINOS)
     fetch(import.meta.env.VITE_URL_SERVICIO_DESTINOS + "/destinos")
@@ -19,20 +27,19 @@ const Destinos = ({ nombre, categoria }) => {
       });
   }, []);
 
-  console.log(destinos);
-
+  let destinosEncontrados = 0;
   return (
     <div>
       {destinos.map((destino) => {
         if (
           (nombre === "" && categoria === "") ||
-          (nombre === "" && destinos.categoria.toLowerCase() === categoria) ||
+          (nombre === "" && destino.categoria.toLowerCase() === categoria) ||
           (destino.nombre.toLowerCase().indexOf(nombre.toLowerCase()) != -1 &&
             categoria === "") ||
           (destino.nombre.toLowerCase().indexOf(nombre.toLowerCase()) != -1 &&
             destino.categoria.toLowerCase() === categoria.toLowerCase())
         ) {
-          console.log("En el IF");
+          destinosEncontrados++;
           return (
             <>
               <div key={destino.id} id={destino.id}>
@@ -40,7 +47,9 @@ const Destinos = ({ nombre, categoria }) => {
                   Nombre: <b>{destino.nombre}</b>
                 </h1>
                 <h2 id="descripcion">Descripción: {destino.descripcion}</h2>
-                <h3 id="categoria">Categoría: {destino.categoria}</h3>
+                <h3 id="categoria">
+                  Categoría: <b>{destino.categoria}</b>
+                </h3>
                 <p id="referencia">Ubicación: {destino.referencia}</p>
                 <p id="direccion">{destino.direccion}</p>
                 <a
@@ -78,6 +87,9 @@ const Destinos = ({ nombre, categoria }) => {
           );
         }
       })}
+      Total destinos encontrados: {destinosEncontrados}
+      <br></br>
+      <br></br>
     </div>
   );
 };
