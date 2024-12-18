@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 const Destinos = ({ nombre, categoria }) => {
   const [destinos, setDestinos] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   if (typeof nombre === "undefined") {
     nombre = ""; // Si no tenemos un nombre válido, lo convertimos a cadena vacía
@@ -24,11 +25,14 @@ const Destinos = ({ nombre, categoria }) => {
       })
       .catch((error) => {
         console.error("Error al obtener destinos: " + error);
-      });
+      })
+      .finally(() => setLoading(false))
   }, []);
 
   let destinosEncontrados = 0;
   return (
+    <>
+    { loading ? <p>Cargando...</p> :
     <div>
       {destinos.map((destino) => {
         if (
@@ -91,6 +95,8 @@ const Destinos = ({ nombre, categoria }) => {
       <br></br>
       <br></br>
     </div>
+    }
+    </>
   );
 };
 
